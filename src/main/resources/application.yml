@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    # 요청하신 환경 변수 이름으로 매핑
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+    
+    # MySQL 기준 드라이버 (DB 종류에 따라 변경 가능)
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    # DB 스키마 자동 생성 (테이블 없으면 자동 생성, 변경 시 업데이트)
+    hibernate:
+      ddl-auto: update
+    
+    # 실행되는 SQL 쿼리를 콘솔에 보여줌 (디버깅용)
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQLDialect # DB에 맞게 조정
+
+  # 파일 업로드 등 기본 설정 (필요시)
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
