@@ -1,12 +1,12 @@
-package com.example.controller;
+package com.example.demo.controller;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
-import com.example.domain.Note;
-import com.example.repository.NoteRepository;
+import com.example.demo.domain.Note;
+import com.example.demo.repository.NoteRepository;
 
 import java.util.List;
 
